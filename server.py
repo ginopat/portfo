@@ -47,7 +47,7 @@ def submit_form():
     if request.method == 'POST':
         data = request.form.to_dict()
         write_to_csv(data)
-        send_email()
+        # send_email()
         return redirect('/thankyou.html')
     else:
         return "something went wrong, try again"
